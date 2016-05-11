@@ -1,0 +1,96 @@
+<?php
+
+namespace app\models;
+
+use Yii;
+
+/**
+ * This is the model class for table "tutorial".
+ *
+ * @property integer $id
+ * @property string $judul
+ * @property string $file
+ * @property string $thumb
+ * @property integer $user_id
+ * @property string $tag
+ * @property integer $subkategori_id
+ * @property string $deskripsi
+ * @property string $downloads
+ * @property string $views
+ * @property string $like
+ * @property string $share
+ * @property string $created
+ * @property string $modified
+ *
+ * @property Subkategori $subkategori
+ * @property User $user
+ */
+class Tutorial extends \yii\db\ActiveRecord
+{
+    /**
+     * @inheritdoc
+     */
+    public $file_upload;
+   
+    
+    public static function tableName()
+    {
+        return 'tutorial';
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function rules()
+    {
+        return [
+            [['subkategori_id', 'deskripsi', 'judul','status'], 'required'],
+            [['user_id', 'subkategori_id', 'downloads', 'views', 'like', 'share'], 'integer'],
+            [['deskripsi','status'], 'string'],
+            [['created', 'modified'], 'safe'],
+            [['judul'], 'string', 'max' => 250],
+            [['file', 'thumb'], 'string', 'max' => 500],
+            [['tag'], 'string', 'max' => 1000]
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'judul' => 'Judul',
+            'file' => 'File',
+            'thumb' => 'Thumb',
+            'user_id' => 'User ID',
+            'tag' => 'Tag',
+            'subkategori_id' => 'Subkategori ID',
+            'deskripsi' => 'deskripsi',
+            'downloads' => 'Downloads',
+            'views' => 'Views',
+            'like' => 'Like',
+            'share' => 'Share',
+            'status' => 'Status',
+            'created' => 'Created',
+            'modified' => 'Modified',
+        ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSubkategori()
+    {
+        return $this->hasOne(Subkategori::className(), ['id' => 'subkategori_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
+    }
+}

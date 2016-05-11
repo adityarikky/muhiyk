@@ -1,0 +1,21 @@
+/*
+	Aditya Rikky Septianto
+	087733720767
+*/
+
+/*main style*/
+@import url('adminpage/custom.css');
+@import url('adminpage/modern.css');
+@import url('adminpage/modern.min.css');
+@import url('adminpage/themes/white.css');
+
+/*plugin*/
+@import url('adminpage/plugins/pace-master/themes/blue/pace-theme-flash.css');
+@import url('adminpage/plugins/uniform/css/uniform.default.min.css');
+@import url('adminpage/plugins/bootstrap/css/bootstrap.min.css');
+@import url('adminpage/plugins/fontawesome/css/font-awesome.css');
+@import url('adminpage/plugins/line-icons/simple-line-icons.css');
+@import url('adminpage/plugins/offcanvasmenueffects/css/menu_cornerbox.css');
+@import url('adminpage/plugins/waves/waves.min.css');
+@import url('adminpage/plugins/switchery/switchery.min.css');
+@import url('adminpage/plugins/3d-bold-navigation/css/style.css');

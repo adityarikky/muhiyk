@@ -1,0 +1,27 @@
+/*
+	Aditya Rikky Septianto
+	087733720767
+*/
+
+/*main*/
+@import url('frontpage/bootstrap.vertical-tabs.css');
+@import url('frontpage/gradient.css');
+@import url('frontpage/hover.css');
+@import url('frontpage/jquery.bxslider.css');
+@import url('frontpage/jquery.fancybox.css');
+@import url('frontpage/jquery.mCustomScrollbar.min.css');
+@import url('frontpage/jquery.mCustomScrollbar.min');
+@import url('frontpage/owl.theme.css');
+
+/*bootstrap*/
+@import url('frontpage/bootstrap/bootstrap.css');
+@import url('frontpage/bootstrap/bootstrap.min.css');
+@import url('frontpage/bootstrap/bootstrap-theme.css');
+@import url('frontpage/bootstrap/bootstrap-theme.min.css');
+
+/*custom*/
+@import url('frontpage/custom/style.css');
+
+/*responsive*/
+@import url('frontpage/responsive/responsive.css');
+
